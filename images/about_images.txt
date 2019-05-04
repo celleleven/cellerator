@@ -1,0 +1,7 @@
+Images are saved using the  naming conventions; name_purpose_versions
+  name = is the basic name associated with the image
+  purpose = the use of the image
+  version = 001 to 999
+  
+  
+An example is the ce11_logo_001.php   As you can see the name is ce11 which is the company name, purpose is log, and version is 001.
