@@ -29,7 +29,7 @@ _To help users identify parts, and to teach anatomy, the parts of Cellerator are
 
 #### Muscular system
 * Muscle ----> [UART, or SPI (I2C is for PNS)] Arduino can talk to steppers, motors, actuators, and power supply
-  *_gCODE controlled via USB on an Arduino
+  * gCODE controlled via USB on an Arduino
 * Bone ----> Currently extruded aluminum, working on sheet metal.
 * Hand ----> 8 GPIO pogo pin (5v, GROUND, GPIO13, GPIO35, GPIO16, GPIO26, GPIO20, GPIO21)
 * Finger ----> Grabber for manipulation of items (5v, GROUND, GPIO32)
@@ -51,14 +51,12 @@ wait -- {Bladder} Waste fluid tank
 wait -- {Reproductive} Bioreactor, Electro Proration
 
 #### Mouth / Face
-{Mouth} Load Cartridge, Arduino CNC switch?
-{Vocal Cords} Output Speaker, Wifi
-{salivary gland} Water Pump Relay (5V, GND, GPIO22-25 Shift Register)
-{Face} Output Display
-wait -- {CNS} I2C Data Communication (12v, GND, GPIO3, GPIO5)
-wait -- {precapillary sphincters} RJ11 Power Relay (5V, GND, DS, SHCP, STCP) GPIO22-25 Shift Register
-* wait -- {Ear} Sound Sensor (USB Microphone)
-* wait -- {Nose} Air Sensor: MQ-135 MQ135 Air Quality Sensor (5V, GND, TTL switch signal output, AO: analog Signal Output)
+* Mouth ----> Load Cartridge, Arduino CNC switch?
+* Vocal Cords ----> Output Speaker, Wifi
+* Salivary gland ----> Water Pump Relay (5V, GND, GPIO22-25 Shift Register)
+* Face ----> Output Display
+* _Pending Ear_ ----> Sound Sensor (USB Microphone)
+* _Pending Nose_ ----> Air Sensor: MQ-135 MQ135 Air Quality Sensor (5V, GND, TTL switch signal output, AO: analog Signal Output)
 
 
 ## Tools
@@ -72,3 +70,4 @@ _All hand tools contain a QR Code to validate the correct tool is selected regar
 *
 
 ### Bench Tools
+* 
