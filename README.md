@@ -1,7 +1,7 @@
 # Ce11: Cellerator
 OpenSource Laboratory Robot
 <p align="center">
-<img src="./IMAGES/Ce11.png" width="200">
+<img src="./images/Ce11.gif" width="200">
 </p>
 
 This is the online repository for the OpenSource hardware project Cellerator.
