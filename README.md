@@ -6,7 +6,7 @@ OpenSource Laboratory Robot
 
 This is the online repository for the OpenSource hardware project Cellerator.
 
-[CellEleven website](http://www.celleleven.com/cellerator)|[Cellerator 3D files](https://cad.onshape.com/documents/5c8c29e275c3d6ad24e851a0/w/f1721dd44bb4fc0688265a60/e/036a6ba0b35b22a34429db9e)
+[CellEleven website](http://www.celleleven.com/cellerator)|[Cellerator 3D files](https://cad.onshape.com/documents/5c8c29e275c3d6ad24e851a0/w/f1721dd44bb4fc0688265a60/e/036a6ba0b35b22a34429db9e)|[Cellerator Code Outline](./code_outline)
 
 **NOTE*** PUT IMAGE OF CELLERATOR NEXT TO LABASSISTANT 
 
