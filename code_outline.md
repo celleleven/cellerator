@@ -38,4 +38,4 @@ Cellerator code is a combination of [python](https://www.python.org), [XOJO](htt
 
 |Code|Version  |
 |--|--|
-| [XOJO Orcid ID Code](code/OrcidID/GetOrcidID.xojo_binary_project)| *α*lpha  |
+| [XOJO Orcid ID Code](code/OrcidID/code/OrcidID/OrcidID.md)| *α*lpha  |
