@@ -1,4 +1,4 @@
-align="center">
+<align="center">
 <img src="./images/Ce11.gif" width="50">
 </p>
 
