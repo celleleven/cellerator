@@ -70,9 +70,9 @@ When viewing properties of a hand tool, first you click on the hand tool of inte
 4. *Physical Location*: This is a global variable for Cellerator knows where to acquire the tool.
 5. *Tool Volume*: This helps Cellerator move the Hand Tool in 3D space and avoid obstacles.
 6. *Tip Location*: This tells Cellerator where the tip is located in 3D space in relation to an experiment and bench tool access ports location.
-7. *Data publications*:
-8. *Data Protocol*:
-</br>**NOTE** These properties are attached to the experiment.
+7. *Data Pins*: this explains which pins are utilized and the mode of the pin.
+8. *Data Protocol*: This contains the language reference of the hand tool.
+</br></br>**NOTE:** These properties are attached to the experiment.
 
 
 view hand tools, add hand tools, and edit hand tools.
