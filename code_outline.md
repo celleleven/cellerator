@@ -99,9 +99,11 @@ Obsolete or unused hand tools can be deleted and removed from the tool library. 
 | [MD file](LINK)| *α*lpha *β*eta *γ*amma 1.0 |YYYY/MM/DD|
 
 ## Bench Tools
+
 <p align="center">
 <img src="./images/benchtoolpage.png" >
 </p>
+
 *TL;DR* View, edit, add, and delete Bench Tools.
 
 >`“The Law of Probabilities: the more things you try, the more likely one of them will work.”` ~ Jack Canfield
@@ -131,9 +133,11 @@ Obsolete or unused bench tools can be deleted and removed from the tool library.
 | [MD file](LINK)| *α*lpha *β*eta *γ*amma 1.0 |YYYY/MM/DD|
 
 ## Experiment Calendar
+
 <p align="center">
 <img src="./images/calendarpage.png" >
 </p>
+
 *TL;DR* Visual of Cellerator schedule.
 
 >`“The secret of getting ahead is getting started. The secret of getting started is breaking your complex overwhelming tasks into small manageable tasks, and starting on the first one."` ~ Mark Twain
