@@ -306,6 +306,11 @@ By default, a secondary backup is stored on the Ce11 servers.  This backup is on
 
 
 ## gCode Sender
+
+<p align="center">
+<img src="./images/gCodeSenderPage.png" >
+</p>
+
 *TL;DR* The console for direct gCode sending.
 
 >`“Quality means doing it right when no one is looking.”` ~ Henry Ford
