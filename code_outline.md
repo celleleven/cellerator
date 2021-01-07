@@ -25,6 +25,9 @@ Cellerator hardware is controlled by the operating system.  This software is a c
 
 
 ## User Login
+<p align="center">
+<img src="./images/userspage.png" >
+</p>
 *TL;DR* Logging into Cellerator adds the user signature to each process.
 
 >`" Anonymity is the death of responsibility, accountability, and credibility"` ~ S James Parsons Jr
