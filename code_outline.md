@@ -42,6 +42,11 @@ Cellerator hardware is controlled by the operating system.  This software is a c
 
 
 ## Lab
+
+<p align="center">
+<img src="./images/labpage.png" width="50">
+</p>
+
 *TL;DR* The Lab page is a snapshot of all Cellerators under your control, with quick feature access.
 
 >`"There are two spiritual dangers in not owning a farm. One is the danger of supposing that breakfast comes from the grocery and the other that heat comes from the furnace."` ~Aldo Leopold

@@ -1,15 +1,20 @@
 
-Cellerator Startup Operations
+%Cellerator Startup Operations
 
-The user goes to the cellerator and turns it on.
-Operating system starts up Cellerator software
-Get real world time
-Look at calendar to catch any crashes
-If not crash and no calendar event
-This causes the Cellerator to calibrate.
-Run Calibration script  Cellerator_Startup.py
-Calibrate Hand
-G28; XYZ (0, 0, 0)
+% Get Real World Time
+
+% Using time verify shutdown log to restart from crash
+
+% If crash true notify technician and restart last process
+
+% Compare shutdown log with Cellerator calendar
+
+% If Cellerator calendar has task or calibration schedule, run setup code, and execute
+
+% Update User log
+
+
+
 Calibrate Eye
 ; Take Picture of floor calibration sticker
 ; Take Picture of left wall calibration sticker
@@ -132,21 +137,3 @@ The designed experiment is converted into kCode.
 
 The user runs the experiment
 The experiment times are mapped onto the calendar, and parks steps in logical location appointment slots
-
-
-
-Yeast transformation https://capricorn.bc.edu//bi204/wp-content/uploads/2015/08/Chapter-12-2015.pdf
-
-
-Prepare a transformation master mix.  The following ingredients provide enough reagents for five transformation reactions.  Combine and mix in a microcentrifuge tube:
-
-100 µL sterile 2 M lithium acetate (freshly prepared)
-400 µL sterile 50% PEG-335
-4  µL 2-mercaptoethanol (STINKY!!  add this in the fume hood!)
-
-
-Add 15 µL of the denatured salmon sperm DNA (2 mg/mL) to a new microcentrifuge tube labeled with the name (or code) of the plasmid.
-
-Note:  It is important for the salmon sperm DNA to be single-stranded for this procedure to work well.  Boil the DNA for 5 minutes to denature the DNA.  Quick chill the DNA by  placing it immediately on ice.  Keep the DNA on ice until you are ready to use it.
-
-3. Add 5 µL of miniprep plasmid DNA to the appropriately labeled microcentrifuge tube.  4.  Add 100 µL of transformation mix from step 1 to each microcentrifuge tube.  Vortex for 10-15 seconds to mix the contents. 5.   Using a sterile toothpick or micropipette tip, scrape a large yeast colony (or the equivalent of a “match head” of yeast) from a YPD plate.  Transfer the yeast to the microcentrifuge tube containing the transformation/DNA solution (step 4) by twirling the toothpick several times.  Be sure that the cells are uniformly suspended before proceeding.
