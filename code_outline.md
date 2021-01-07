@@ -44,7 +44,7 @@ Cellerator hardware is controlled by the operating system.  This software is a c
 ## Lab
 
 <p align="center">
-<img src="./images/labpage.png" width="50">
+<img src="./images/labpage.png" >
 </p>
 
 *TL;DR* The Lab page is a snapshot of all Cellerators under your control, with quick feature access.
