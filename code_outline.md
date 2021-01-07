@@ -65,6 +65,9 @@ The scan tool uses QR Codes located on hand tools and bench tools to aid in the 
 | [MD file](LINK)| *α*lpha *β*eta *γ*amma 1.0 |YYYY/MM/DD|
 
 ## Hand Tools
+<p align="center">
+<img src="./images/handtool.png" >
+</p>
 *TL;DR* View, edit, add, and delete hand tools.
 
 >`“I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail.”` ~ Abraham Maslow
