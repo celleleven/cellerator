@@ -17,7 +17,7 @@ Cellerator hardware is controlled by the operating system.  This software is a c
 7. [Peer Review](#peer-review)
 8. [Sell Downtime](#sell-downtime)
 9. [Data Analysis](#data-analysis)
-10. [Electronic Laboritory Notebook](#electronic-laboritory-notebook)
+10. [Electronic Laboratory Notebook](#electronic-laboratory-notebook)
 11. [Publish](#publish)
 12. [gCode Sender](#gcode-sender)
 13. [Photo](#photo)
@@ -74,7 +74,7 @@ The scan tool uses QR Codes located on hand tools and bench tools to aid in the 
 
 >`“I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail.”` ~ Abraham Maslow
 
-**About:**  The **Hand Tool** page allows the user to modify features of hand tools. On the Hand tool page, you start by selecting the Cellerator, once selected a list of active hand tools is displayed. From here you can view, add, delete, or update drivers for hand tools.
+**About:**  The **Hand Tool** page allows the user to modify the features of hand tools. On the Hand tool page, you start by selecting the Cellerator, once selected a list of active hand tools is displayed. From here you can view, add, delete, or update drivers for hand tools.
 
 When viewing the properties of a hand tool, first you click on the hand tool of interest. This loads and displays data about this tool; Name, Firmware Version, Documentation Link, Physical Location, Tool Volume, Tip Location, Data Pins, and Data Protocol. Each field can be updated from this page.  
 1. *Name*: can be changed if multiple of the same tools are present.
@@ -116,7 +116,7 @@ When viewing the properties of a bench tool, first you click on the bench tool o
 3. *Documentation*: Contains a URL to the online documentation on the selected hand tool.
 4. *Physical Location*: This is a global variable for Cellerator knows where to find the bench Tools.
 5. *Tool Volume*: This helps Cellerator move the Hand Tool in 3D space and avoid obstacles.
-6. *Access Port Location*: This tells Cellerator the location where hand tools can deposit from tooltip.
+6. *Access Port Location*: This tells Cellerator the location where hand tools can deposit from the tooltip.
 7. *I2C Identification*: this identifies the bench tools I2C address.
 8. *Data Protocol*: This contains the language reference of the hand tool.
 </br></br>**NOTE:** These properties are attached to the experiment.
@@ -161,9 +161,9 @@ The guided interface is based on the scientific method.  Guiding the user throug
 The hypothesis generator asks a simple question to get to the root idea.  The data is used in the acquisition of research material, and the importation of similar experiments and protocols.
 
 The research stage of the design experiment queries scientific and non-scientific databases to fine overlapping research material.  The sources of each paper, article, URL, and protocol are stitched into a node network.  This node network is interactive, where the user clicks on a node to see the article, closely repeated articles are pooled together.  
-- [ ] future version will utilize AI to help the researcher find valuable information.  This source data, notes, and comments are synced with Zotero for cross-collaboration and able to work on research away from Cellerator.
+- [ ] A future versions will utilize AI to help the researcher find valuable information.  This source data, notes, and comments are synced with Zotero for cross-collaboration and able to work on research away from Cellerator.
 
-The experiment designer uses a combination of the research notes and thesis to guide the researcher in making an experiment with proper controls using dependent and independent variables.  The experiment designer can use pre-defined or user generated protocols. These protocols start with a human-readable section followed by Cellerator Code, DAVR. The protocol is broken down into tasks, and tasks are broken down into steps. Protocols are collections of tasks, and tasks are a collection of steps. Each step is coded using DAVR. **DAVR** consists of four calls standing for **D**evice, **A**ction, **V**erification, and **R**ecord.
+The experiment designer uses a combination of the research notes and thesis to guide the researcher in making an experiment with proper controls using dependent and independent variables.  The experiment designer can use pre-defined or user-generated protocols. These protocols start with a human-readable section followed by Cellerator Code, DAVR. The protocol is broken down into tasks, and tasks are broken down into steps. Protocols are collections of tasks, and tasks are a collection of steps. Each step is coded using DAVR. **DAVR** consists of four calls standing for **D**evice, **A**ction, **V**erification, and **R**ecord.
 
 1. **Device** Call: Indicates what device is being used whether it's the hand, hand tool, bench tool, or environmental controls.
 2. **Action** Call: specifies what the specified devices are to do.    
@@ -250,14 +250,6 @@ First, in the experiment designer, the researcher will specify which of the coll
 
 
 
-
-
-
-## Electronic Laboritory Notebook
-*TL;DR* ELN keeps a running notebook of everything that is done.
-
->`“Remember, kids, the only difference between screwing around and science is writing it down."` ~ Adam Savage, mythbusters
-
 ## Electronic Laboratory Notebook
 *TL;DR* ELN keeps a running notebook of everything that is done.
 
@@ -294,7 +286,7 @@ The **Electronic Laboratory Notebook** page is the accumulated data generated fr
 
 By default, a secondary backup is stored on the Ce11 servers.  This backup is only accessible by the creator and the owner.  
 
-1. Pre-experiment data is made public for Peer Review.  This can also be published to third-party sites; google drive, OSF (Open Science Foundation), Benchling, stackexchange, GitHub, and others.
+1. Pre-experiment data is made public for Peer Review.  This can also be published to third-party sites; google drive, OSF (Open Science Foundation), Benchling, StackExchange, GitHub, and others.
 
 2. Durning-experiment data is owned by the creator.  The creator can specify if the data is freely accessible or has a paywall.
 
