@@ -65,7 +65,7 @@ Cellerator electronics uses an anatomical naming convention, see the Anatomy ref
 **Dr. Frederick Frankenstein**: Are you saying that you put an abnormal brain in a 7 foot tall, 54 inch wide GORILLA!!!??? <br><br>*Young Frankenstein*
 
 **About:**
-Raspberry Pi is a small single-board computer (SBC) developed in the United Kingdom by the Raspberry Pi Foundation in association with Broadcom. The Raspberry Pi board used in Cellerator utilizes the ARM processor, CSI camera input, GPIO pins and the USB ports. The ARM processor runs the operating system, executes Cellerator software, and runs the communication protocols the other IO ports.  The CSI camera input collects images and videos from the 8 MP camera. The GPIO pins are used in communication and data collection, covered later in this outline. Lastly, The USB ports are used to connect the external hard-drive and utilize the serial protocol for communication with the drivetrain.  
+Raspberry Pi is a small single-board computer (SBC) developed in the United Kingdom by the [Raspberry Pi Foundation](https://www.raspberrypi.org/about/) in association with Broadcom. The Raspberry Pi board used in Cellerator utilizes the ARM processor, CSI camera input, GPIO pins and the USB ports. The ARM processor runs the operating system, executes Cellerator software, and runs the communication protocols the other IO ports.  The CSI camera input collects images and videos from the 8 MP camera. The GPIO pins are used in communication and data collection, covered later in this outline. Lastly, The USB ports are used to connect the external hard-drive and utilize the serial protocol for communication with the drivetrain.  
 
 
 **Wire Diagram**
