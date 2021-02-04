@@ -42,7 +42,7 @@ Cellerator electronics uses an anatomical naming convention, see the Anatomy ref
 ### Anatomy
 1. [Brain: Raspberry Pi](#brain)
 2. [Eye and Eye Muscle: 8 MP Camera and SG90 Servo](#eye)
-3. [Spinal Cord: 8 Channel relay and IC2 line on an RJ11](#spinal_cord)
+3. [Spinal Cord: 8 Channel relay and IC2 line on an RJ11](#spinal-cord)
 4. [Hand: 6 GPIO (General Purpose Input output pin)](#hand)
 5. [Heart: Power Supply (12v, 5v)](#heart)
 6. [Muscles: ](#muscle)
@@ -105,10 +105,10 @@ The 8 MP camera (eye) is attached to the Z-axis arm connected to a servo motor (
 **Wire Diagram**
 ```
                                 +---------+            +---------+
-[ Raspberry Pi ]-> CSI -------> |Arducam  | ---HDMI--- |Arducam  | -----> 8 MP Camera
-               |-> GPIO 15 ---> | extender|            | extender| -----> SG90 Servo
+[ Raspberry Pi ] -> CSI <------ |Arducam  | <--HDMI--> |Arducam  | <---- 8 MP Camera
+               | -> GPIO 15 <-> | extender|            | extender| -----> SG90 Servo
                | -> GROUND ---> |         |            |         | --|
-               | -> 5VDC ---->  |         |            |         | --/
+               \ -> 5VDC -----> |         |            |         | --/
                                 +---------+            +---------+
 
 
@@ -126,8 +126,7 @@ The 8 MP camera (eye) is attached to the Z-axis arm connected to a servo motor (
 </p>
 
 <p align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Photo-RJ11-MF.jpg/1200px-Photo-RJ11-MF.jpg
-" width = 400>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Photo-RJ11-MF.jpg/1200px-Photo-RJ11-MF.jpg" width = 400>
 </p>
 
 *TL;DR* The Spinal cord is a combination of an 8-channel high voltage power relay and a RJ11 jack running a I2C Bus.  
@@ -137,7 +136,7 @@ The 8 MP camera (eye) is attached to the Z-axis arm connected to a servo motor (
 
 
 **About:**
-Cellerator's spinal cord is made up of an 8-channel relay and an I2C data bus.  The 8-Channel relay is connected to the Raspberry Pi via a 74HC595 Shift out register.  The 74HC595 Shift out resister takes 3 data pins from the Raspberry pi (18, 20, and 25) and outputs data to the 8 input pins of the 8-channel relay.  This 8-channel relay module is scalable for a multiple of 8 daisy chains, or 64 individual relays.  The I2C takes four lines; 12VDC, GRD, SDA, and SCL. The RJ11 data bus module is scalable to 128 individual unique identified devices.  
+Cellerator's spinal cord is made up of an 8-channel relay and an I2C data bus.  The 8-Channel relay is connected to the Raspberry Pi via a 74HC595 Shift out register.  The 74HC595 Shift out resister takes 3 data pins from the Raspberry Pi (18, 20, and 25) and outputs data to the 8 input pins of the 8-channel relay.  This 8-channel relay module is scalable for a multiple of 8 daisy chains, or 64 individual relays.  The I2C takes four lines; 12VDC, GRD, SDA, and SCL. The RJ11 data bus module is scalable to 128 individual unique identified devices.  
 
 - [ ] Verify Pins
 
@@ -185,12 +184,11 @@ PIn [4] = 12V
 
 ## Hand
 <p align="center">
-<img src="./images/" >
+<img src="./images/rj45_breakout.jpg" width= 300 >
 </p>
-*TL;DR*  
+*TL;DR*  The hand is attached to the z-axis arm and can interface with Hand Tools using 6 GPIO pins.
 
 >`"He pushed away from her and raised his arm, forcing his stump into her face. "A Hand without a hand? A bad jape, sister. Don't ask me to rule."` ~ George R.R. Martin, A Feast for Crows
-
 
 **About:**
 
@@ -198,12 +196,15 @@ PIn [4] = 12V
 
 **Wire Diagram**
 ```
-5VDC -> [Raspberry Pi] <-> GPIO pins
-                      |<- CSI Camera Port
-                      |<-> Ethernet
-                      |-> HDMI
-                      |-> Audio Jack
-                      \<-> USB
+[Raspberry Pi] -> GPIO 00
+             | -> GPIO 00
+             | -> GPIO 00
+             | -> GPIO 00
+             | -> GPIO 00
+             | -> GPIO 00
+             | -> GND
+             \ -> 12VDC
+
 ```
 
 |Code|Version  |Date |
