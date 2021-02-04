@@ -36,15 +36,16 @@ Cellerator electronics uses an anatomical naming convention, see the Anatomy ref
 |1|Motor Drive Controller Board|$6.50|[Amazon](https://amzn.to/2MNmKp4)|**Under development**|
 |||||
 |1|7 inch LCD Display|$61.99|[Amazon](https://amzn.to/3pQFVwQ)||
+||Total|**$326.88**||
 
 
 ### Anatomy
 1. [Brain: Raspberry Pi](#brain)
-2. [Eye and Eye Muscle: 8 MP Camera and SG90 Servo](#lab)
+2. [Eye and Eye Muscle: 8 MP Camera and SG90 Servo](#eye)
 3. [Spinal Cord: 8 Channel relay and IC2 line on an RJ11](#spinal_cord)
 4. [Hand: 6 GPIO (General Purpose Input output pin)](#hand)
 5. [Heart: Power Supply (12v, 5v)](#heart)
-6. [Muscles: ](#muscles)
+6. [Muscles: ](#muscle)
 7. [Lungs](#lungs)
 
 
@@ -64,7 +65,18 @@ Cellerator electronics uses an anatomical naming convention, see the Anatomy ref
 **Dr. Frederick Frankenstein**: Are you saying that you put an abnormal brain in a 7 foot tall, 54 inch wide GORILLA!!!??? <br><br>*Young Frankenstein*
 
 **About:**
-Raspberry Pi is a small single-board computer (SBC) developed in the United Kingdom by the Raspberry Pi Foundation in association with Broadcom. The Raspberry Pi board used in Cellerator utilizes the ARM processor, CSI camera input, GPIO pins and the USB ports. The ARM processor runs the operating system, executes Cellerator software, and runs the communication protocols the other IO ports.  The CSI camera input collects images and videos from the 8 MP camera. The GPIO pins are used in communication and data collection, covered later in this outline. Lastly, The USB ports are used to connect the external hard-drive and utilize the serial port for communication with the drivetrain.  
+Raspberry Pi is a small single-board computer (SBC) developed in the United Kingdom by the Raspberry Pi Foundation in association with Broadcom. The Raspberry Pi board used in Cellerator utilizes the ARM processor, CSI camera input, GPIO pins and the USB ports. The ARM processor runs the operating system, executes Cellerator software, and runs the communication protocols the other IO ports.  The CSI camera input collects images and videos from the 8 MP camera. The GPIO pins are used in communication and data collection, covered later in this outline. Lastly, The USB ports are used to connect the external hard-drive and utilize the serial protocol for communication with the drivetrain.  
+
+
+**Wire Diagram**
+```
+5VDC -> [Raspberry Pi] <-> GPIO pins
+                      |<- CSI Camera Port
+                      |<-> Ethernet
+                      |-> HDMI
+                      |-> Audio Jack
+                      \<-> USB
+```
 
 |Code|Version  |Date |
 |--|--|--|
@@ -76,12 +88,13 @@ Raspberry Pi is a small single-board computer (SBC) developed in the United King
 <p align="center">
 <img src="https://www.raspberrypi-spy.co.uk/wp-content/uploads/2016/04/raspberry_pi_camera_v2_rs.jpg" >
 </p>
+
 *TL;DR*  The 8 MP camera is the eye of Cellerator and the foundation of all Cellerator preformed actions.
 
-> `Seeing is believing and believing is knowing and knowing beats unknowing and the unknown.` ~ Philip Roth
+>`"Seeing is believing and believing is knowing and knowing beats unknowing and the unknown."` <br> ~ Philip Roth
 
 **About:**
-The 8 MP camera is attached to the Z-axis arm connected to a servo motor capable of moving the camera is 180°.  The connection from the camera PCB and SG90 server to the Raspberry Pi utilizes the Arducam HDMI break out board.  The Arducam breakout board as three auxiliary pins that connect the ground, power, and data for the SG90 Server, and the remaining pins for the camera interface.
+
 
 
 **Wiring Diagram**<br>
@@ -99,20 +112,50 @@ GPIO (GND, 5VDC, GPIO25) -> Arducam -> SG90 Servo
 </p>
 *TL;DR* The Spinal cord is a combination of an 8-channel high voltage power relay and a I2C data line.  
 
->`"It doesn't make sense to hire smart people and then tell them what to do. We hire smart people and they tell us what to do."     
-~Steve Jobs
+>`"It doesn't make sense to hire smart people and then tell them what to do. We hire smart people and they tell us what to do."` ~ Steve Jobs
+
+
 
 **About:**
 Cellerator's spinal cord is made up of an 8-channel relay and a I2C data bus.  The 8-Channel relay is connected to the Raspberry Pi via a 74HC595 Shift out register.  The 74HC595 Shift out resister takes 3 data pins from the Raspberry pi (18, 20, and 25) and outputs data to the 8 input pins of the 8-channel relay.  This 8-channel relay module is scalable for multiple of 8 daisy chains, or 64 individual relays.  The I2C data bus in constrained in RJ11 connects and contains four lines; 12VDC, GRD, SDA, and SCL.  The RJ11 hub is connected to GPIO Pins (27 and 28).  The I2C bus is cable of communicating with 128
 
 - [ ] Verify Pins
 
-**Wiring Diagram**
-From Pi to Shiftout to Relay
+** Shift out wire diagram**
+```
+                            +--------+
+[Relay In 2] ------ QB 1 --O|         |0-- 16 VCC -------[ Power 5V] XXX CHECK XXX
+[Relay In 3] ------ QC 2 --O|    7    |0-- 15 QA --------[Relay In 1]
+[Relay In 4] ------ QD 3 --O|    4    |0-- 14 SER -------[Raspberry Pi GPIO 25] XXX CHECK XXX
+[Relay In 5] ------ QE 4 --O|    H    |0-- 13 OE
+[Relay In 6] ------ QF 5 --O|    C    |0-- 12 RCLK ------[Raspberry Pi GPIO 19] XXX CHECK XXX
+[Relay In 7] ------ QG 6 --O|    5    |0-- 11 SRCLK -----[Raspberry Pi GPIO 20] XXX CHECK XXX
+[Relay In 8] ------ QH 7 --O|    9    |0-- 10 SRCLR
+[ Ground   ] ----- GND 8 --O|    5    |0-- QH
+                             +--------+
+```
 
-I2C
+
+<p align="center">
+<img src="/images/Pinout-74HC595-Shift-Register.png" >
+</p>
+
+**RJ11 jack with I2C wire diagram**
+```
+                         +----------+
+[Line 1] --Blue-Wire----[1]===      |
+[Line 2] --Green-Wire---[2]===   / --+  <- RJ11
+[Line 3] --Black-Wire---[3]===   \ --+
+[LIne 4] --Red-Wire-----[4]===      |
+                         +----------+
 
 
+Pin 1 = SCL (Arduino Uno A5)
+Pin 2 = SDA (Arduino Uno A4)
+Pin 3 = Ground
+PIn 4 = 12V
+
+```
 
 |Code|Version  |Date |
 |--|--|--|
@@ -126,20 +169,25 @@ I2C
 </p>
 *TL;DR*  
 
->`""
+>`"He pushed away from her and raised his arm, forcing his stump into her face. "A Hand without a hand? A bad jape, sister. Don't ask me to rule."` ~ George R.R. Martin, A Feast for Crows
+
 
 **About:**
 
 |Code|Version  |Date |
 |--|--|--|
 | | *α*lpha |20XX|
+
+
+
+
 ## Heart
 <p align="center">
 <img src="./images/" >
 </p>
 *TL;DR*  
 
->`""
+>`"Quote"` ~ Author
 
 **About:**
 
@@ -154,7 +202,7 @@ I2C
 </p>
 *TL;DR*  
 
->`""
+>`"Quote"` ~ Author
 
 **About:**
 
@@ -168,7 +216,7 @@ I2C
 </p>
 *TL;DR*  
 
->`""
+>`"Quote"` ~ Author
 
 **About:**
 
