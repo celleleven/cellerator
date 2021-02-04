@@ -3,6 +3,7 @@
 </p>
 
 # Ce11: Cellerator Electrical
+
 *TL;DR* An overview on the foundational electronics in Cellerator.
 
 Cellerator electronics uses an anatomical naming convention, see the Anatomy reference below for more infomration.  The basic images are generated using [Fritzing](https://fritzing.org/download/).
@@ -186,11 +187,13 @@ PIn [4] = 12V
 <p align="center">
 <img src="./images/rj45_breakout.jpg" width= 300 >
 </p>
-*TL;DR*  The hand is attached to the z-axis arm and can interface with Hand Tools using 6 GPIO pins.
+
+*TL;DR* The hand is attached to the z-axis arm and can interface with Hand Tools using 6 GPIO pins.
 
 >`"He pushed away from her and raised his arm, forcing his stump into her face. "A Hand without a hand? A bad jape, sister. Don't ask me to rule."` ~ George R.R. Martin, A Feast for Crows
 
 **About:**
+The hand is made of of pogo-pins, water-line and air-line.  There are eight pogo-pins, two pins are used for power and six pins used for data.  The pogo-pins are connected the the Raspberry Pi GPIO pins via a two RJ45 breakout board allowing for the use of an Ethernet cable connection.  The pogo-pins are connected to GPIO pins (01, 02, ... 08).  The water line is controlled by a 12VDV water pump.  The water pump is connected replay controlled by (GPIO xxx). The air line is controlled by a 12VDV air pump.  The air pump is connected replay controlled by (GPIO xxx)
 
 
 
@@ -218,6 +221,7 @@ PIn [4] = 12V
 <p align="center">
 <img src="./images/" >
 </p>
+
 *TL;DR*  
 
 >`"Quote"` ~ Author
@@ -243,6 +247,7 @@ PIn [4] = 12V
 <p align="center">
 <img src="https://images-na.ssl-images-amazon.com/images/I/41Dm0v1foOL._AC_SX355_.jpg" >
 </p>
+
 *TL;DR*  
 
 >`"Quote"` ~ Author
@@ -267,6 +272,7 @@ PIn [4] = 12V
 <p align="center">
 <img src="./images/" >
 </p>
+
 *TL;DR*  
 
 >`"Quote"` ~ Author
