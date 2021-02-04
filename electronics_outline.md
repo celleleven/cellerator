@@ -57,11 +57,14 @@ Cellerator electronics uses an anatomical naming convention, see the Anatomy ref
 
 *TL;DR*  The Raspberry Pi is the brain of Cellerator that controls moments, image capture and processing, and external and internal device communication.
 
->`""
+>**Dr. Frederick Frankenstein**: Whose brain did you put in him?<br>
+**Igor**: Err... Abby something...<br>
+**Dr. Frederick Frankenstein**: Abby who?<br>
+**Igor**: Abby... Normal. Yes that's it, Abby Normal!<br>
+**Dr. Frederick Frankenstein**: Are you saying that you put an abnormal brain in a 7 foot tall, 54 inch wide GORILLA!!!??? <br><br>*Young Frankenstein*
 
 **About:**
-The Raspberry Pi is a single board computer (SBC).
-
+Raspberry Pi is a small single-board computer (SBC) developed in the United Kingdom by the Raspberry Pi Foundation in association with Broadcom. The Raspberry Pi board used in Cellerator utilizes the ARM processor, CSI camera input, GPIO pins and the USB ports. The ARM processor runs the operating system, executes Cellerator software, and runs the communication protocols the other IO ports.  The CSI camera input collects images and videos from the 8 MP camera. The GPIO pins are used in communication and data collection, covered later in this outline. Lastly, The USB ports are used to connect the external hard-drive and utilize the serial port for communication with the drivetrain.  
 
 |Code|Version  |Date |
 |--|--|--|
@@ -73,11 +76,17 @@ The Raspberry Pi is a single board computer (SBC).
 <p align="center">
 <img src="https://www.raspberrypi-spy.co.uk/wp-content/uploads/2016/04/raspberry_pi_camera_v2_rs.jpg" >
 </p>
-*TL;DR*  
+*TL;DR*  The 8 MP camera is the eye of Cellerator and the foundation of all Cellerator preformed actions.
 
->`""
+> `Seeing is believing and believing is knowing and knowing beats unknowing and the unknown.` ~ Philip Roth
 
 **About:**
+The 8 MP camera is attached to the Z-axis arm connected to a servo motor capable of moving the camera is 180°.  The connection from the camera PCB and SG90 server to the Raspberry Pi utilizes the Arducam HDMI break out board.  The Arducam breakout board as three auxiliary pins that connect the ground, power, and data for the SG90 Server, and the remaining pins for the camera interface.
+
+
+**Wiring Diagram**<br>
+CSI -> Arducam -> 8 MP Camera <br>
+GPIO (GND, 5VDC, GPIO25) -> Arducam -> SG90 Servo
 
 |Code|Version  |Date |
 |--|--|--|
@@ -88,30 +97,27 @@ The Raspberry Pi is a single board computer (SBC).
 <p align="center">
 <img src="https://images-na.ssl-images-amazon.com/images/I/717vpb8DkHL._AC_SL1500_.jpg" >
 </p>
-*TL;DR*  
+*TL;DR* The Spinal cord is a combination of an 8-channel high voltage power relay and a I2C data line.  
 
->`""
+>`"It doesn't make sense to hire smart people and then tell them what to do. We hire smart people and they tell us what to do."     
+~Steve Jobs
 
 **About:**
+Cellerator's spinal cord is made up of an 8-channel relay and a I2C data bus.  The 8-Channel relay is connected to the Raspberry Pi via a 74HC595 Shift out register.  The 74HC595 Shift out resister takes 3 data pins from the Raspberry pi (18, 20, and 25) and outputs data to the 8 input pins of the 8-channel relay.  This 8-channel relay module is scalable for multiple of 8 daisy chains, or 64 individual relays.  The I2C data bus in constrained in RJ11 connects and contains four lines; 12VDC, GRD, SDA, and SCL.  The RJ11 hub is connected to GPIO Pins (27 and 28).  The I2C bus is cable of communicating with 128
+
+- [ ] Verify Pins
+
+**Wiring Diagram**
+From Pi to Shiftout to Relay
+
+I2C
+
+
 
 |Code|Version  |Date |
 |--|--|--|
 | | *α*lpha |20XX|
 
-
-## Eye
-<p align="center">
-<img src="./images/" >
-</p>
-*TL;DR*  
-
->`""
-
-**About:**
-
-|Code|Version  |Date |
-|--|--|--|
-| | *α*lpha |20XX|
 
 
 ## Hand
