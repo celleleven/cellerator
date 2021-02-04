@@ -85,8 +85,13 @@ Raspberry Pi is a small single-board computer (SBC) developed in the United King
 
 ## Eye
 <p align="center">
-<img src="https://www.raspberrypi-spy.co.uk/wp-content/uploads/2016/04/raspberry_pi_camera_v2_rs.jpg" >
+<img src="https://www.raspberrypi-spy.co.uk/wp-content/uploads/2016/04/raspberry_pi_camera_v2_rs.jpg">
 </p>
+
+<p align="center">
+<img src="/images/arducam_HDMI.jpg" width=300 >
+</p>
+
 
 *TL;DR*  The 8 MP camera is the eye of Cellerator and the foundation of all Cellerator preformed actions.
 
@@ -94,6 +99,7 @@ Raspberry Pi is a small single-board computer (SBC) developed in the United King
 
 **About:**
 
+The 8 MP camera (eye) is attached to the Z-axis arm connected to a servo motor (eye muscle) capable of moving the camera 180°.  The 8 MP camera and the SG90 servo connect to the raspberry pi via the Arducam HDMI extender (Optic canal).  The Arducam extender is a PCB breakout board containing an HDMI port (19 pins) to CSI port (15 pins) and auxiliary (3 pins).  The CSI port connects the 8 MP camera, and the auxiliary connects the servo.
 
 
 **Wiring Diagram**<br>
@@ -107,7 +113,7 @@ GPIO (GND, 5VDC, GPIO25) -> Arducam -> SG90 Servo
 
 ## Spinal Cord
 <p align="center">
-<img src="https://images-na.ssl-images-amazon.com/images/I/717vpb8DkHL._AC_SL1500_.jpg" >
+<img src="https://images-na.ssl-images-amazon.com/images/I/717vpb8DkHL._AC_SL1500_.jpg" width = 400>
 </p>
 *TL;DR* The Spinal cord is a combination of an 8-channel high voltage power relay and a I2C data line.  
 
