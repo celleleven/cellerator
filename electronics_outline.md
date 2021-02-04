@@ -29,7 +29,7 @@ Cellerator electronics uses an anatomical naming convention, see the Anatomy ref
 |4|Stepper Driver 14988|$9.99|[Amazon](https://amzn.to/2YFCkFM)||
 |4| Nema 7 Stepper Motors|$36.79|[Amazon](https://amzn.to/36CApqc)||
 |1|ATX Power Supply|$27.99|[Amazon](https://amzn.to/2NZRCmN)||
-||||||
+|1| ATX Breakout board |$12.99|[Amazon](https://amzn.to/3rl6lam)||
 ||||||
 |1| 12 Water Pump|$8.99|[Amazon](https://amzn.to/3rkTDZ4)|**Under development**|
 |1| 12V Vacuum pump|$21.95|[Amazon](https://amzn.to/3rnAGoy)|**Under development**|
@@ -37,7 +37,7 @@ Cellerator electronics uses an anatomical naming convention, see the Anatomy ref
 |1|Motor Drive Controller Board|$6.50|[Amazon](https://amzn.to/2MNmKp4)|**Under development**|
 |||||
 |1|7 inch LCD Display|$61.99|[Amazon](https://amzn.to/3pQFVwQ)||
-||Total|**$326.88**||
+||Total|**$339.87**||
 
 
 ### Anatomy
@@ -87,9 +87,6 @@ Raspberry Pi is a small single-board computer (SBC) developed in the United King
 ## Eye
 <p align="center">
 <img src="https://www.raspberrypi-spy.co.uk/wp-content/uploads/2016/04/raspberry_pi_camera_v2_rs.jpg">
-</p>
-
-<p align="center">
 <img src="/images/arducam_HDMI.jpg" width=300 >
 </p>
 
@@ -193,7 +190,7 @@ PIn [4] = 12V
 >`"He pushed away from her and raised his arm, forcing his stump into her face. "A Hand without a hand? A bad jape, sister. Don't ask me to rule."` ~ George R.R. Martin, A Feast for Crows
 
 **About:**
-The hand is made of of pogo-pins, water-line and air-line.  There are eight pogo-pins, two pins are used for power and six pins used for data.  The pogo-pins are connected the the Raspberry Pi GPIO pins via a two RJ45 breakout board allowing for the use of an Ethernet cable connection.  The pogo-pins are connected to GPIO pins (01, 02, ... 08).  The water line is controlled by a 12VDV water pump.  The water pump is connected replay controlled by (GPIO xxx). The air line is controlled by a 12VDV air pump.  The air pump is connected replay controlled by (GPIO xxx)
+There are three parts to the hand; the data line, the waterline, and the airline.  The data line contains eight pogo-pins, two pins connect to power, and six pins connect to data.  The data line connects to the Raspberry Pi GPIO pins via two RJ45 breakout board.  This RJ45 breakout board allows bridging the hand to the Raspberry pi using an Ethernet cable.  The pogo-pins connect to GPIO pins (xx, yy, zz ... 08).  The waterline is attached to a 12VDC water pump.  The water pump is operated by GPIO pin XXX using a relay.  The airline is attached to a 12VDC air pump.  The air pump is operated by GPIO pin XXX using a relay.  
 
 
 
@@ -206,7 +203,10 @@ The hand is made of of pogo-pins, water-line and air-line.  There are eight pogo
              | -> GPIO 00
              | -> GPIO 00
              | -> GND
-             \ -> 12VDC
+             | -> 12VDC
+             | -> GPIO 00 (Water pump)
+             \ -> GPIO 00 (Air pump)
+
 
 ```
 
@@ -219,23 +219,24 @@ The hand is made of of pogo-pins, water-line and air-line.  There are eight pogo
 
 ## Heart
 <p align="center">
-<img src="./images/" >
+<img src="./images/powersupply.jpg" width = "300" >
+<img src="./images/ATXBreakout.jpg" width = "300" >
 </p>
 
-*TL;DR*  
 
->`"Quote"` ~ Author
+
+*TL;DR*  The heart of Cellerator is a 520 watt ATX computer power supply attached to a breadout board.
+
+>`“You must be the change you wish to see in the world.”` ~ Gandh
 
 **About:**
+The 520-watt ATX computer power supply provides a 20 pin for the ATX breakout board.  The breakout board provides 3.3VDC, 5VDC, and 12VDC.    
 
 **Wire Diagram**
 ```
-5VDC -> [Raspberry Pi] <-> GPIO pins
-                      |<- CSI Camera Port
-                      |<-> Ethernet
-                      |-> HDMI
-                      |-> Audio Jack
-                      \<-> USB
+120VAC -> [Power Supply] -> [ATX Breakout] -> 3.3VDC
+                                         | -> 5VDC
+                                         \-> 12VDC
 ```
 
 |Code|Version  |Date |
