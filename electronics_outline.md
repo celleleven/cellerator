@@ -102,9 +102,18 @@ Raspberry Pi is a small single-board computer (SBC) developed in the United King
 The 8 MP camera (eye) is attached to the Z-axis arm connected to a servo motor (eye muscle) capable of moving the camera 180°.  The 8 MP camera and the SG90 servo connect to the raspberry pi via the Arducam HDMI extender (Optic canal).  The Arducam extender is a PCB breakout board containing an HDMI port (19 pins) to CSI port (15 pins) and auxiliary (3 pins).  The CSI port connects the 8 MP camera, and the auxiliary connects the servo.
 
 
-**Wiring Diagram**<br>
-CSI -> Arducam -> 8 MP Camera <br>
-GPIO (GND, 5VDC, GPIO25) -> Arducam -> SG90 Servo
+**Wire Diagram**
+```
+                                +---------+            +---------+
+[ Raspberry Pi ]-> CSI -------> |Arducam  | ---HDMI--- |Arducam  | -----> 8 MP Camera
+               |-> GPIO 15 ---> | extender|            | extender| -----> SG90 Servo
+               | -> GROUND ---> |         |            |         | --|
+               | -> 5VDC ---->  |         |            |         | --/
+                                +---------+            +---------+
+
+
+
+```
 
 |Code|Version  |Date |
 |--|--|--|
@@ -115,18 +124,24 @@ GPIO (GND, 5VDC, GPIO25) -> Arducam -> SG90 Servo
 <p align="center">
 <img src="https://images-na.ssl-images-amazon.com/images/I/717vpb8DkHL._AC_SL1500_.jpg" width = 400>
 </p>
-*TL;DR* The Spinal cord is a combination of an 8-channel high voltage power relay and a I2C data line.  
+
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Photo-RJ11-MF.jpg/1200px-Photo-RJ11-MF.jpg
+" width = 400>
+</p>
+
+*TL;DR* The Spinal cord is a combination of an 8-channel high voltage power relay and a RJ11 jack running a I2C Bus.  
 
 >`"It doesn't make sense to hire smart people and then tell them what to do. We hire smart people and they tell us what to do."` ~ Steve Jobs
 
 
 
 **About:**
-Cellerator's spinal cord is made up of an 8-channel relay and a I2C data bus.  The 8-Channel relay is connected to the Raspberry Pi via a 74HC595 Shift out register.  The 74HC595 Shift out resister takes 3 data pins from the Raspberry pi (18, 20, and 25) and outputs data to the 8 input pins of the 8-channel relay.  This 8-channel relay module is scalable for multiple of 8 daisy chains, or 64 individual relays.  The I2C data bus in constrained in RJ11 connects and contains four lines; 12VDC, GRD, SDA, and SCL.  The RJ11 hub is connected to GPIO Pins (27 and 28).  The I2C bus is cable of communicating with 128
+Cellerator's spinal cord is made up of an 8-channel relay and an I2C data bus.  The 8-Channel relay is connected to the Raspberry Pi via a 74HC595 Shift out register.  The 74HC595 Shift out resister takes 3 data pins from the Raspberry pi (18, 20, and 25) and outputs data to the 8 input pins of the 8-channel relay.  This 8-channel relay module is scalable for a multiple of 8 daisy chains, or 64 individual relays.  The I2C takes four lines; 12VDC, GRD, SDA, and SCL. The RJ11 data bus module is scalable to 128 individual unique identified devices.  
 
 - [ ] Verify Pins
 
-** Shift out wire diagram**
+**Shift out wire diagram**
 ```
                             +--------+
 [Relay In 2] ------ QB 1 --O|         |0-- 16 VCC -------[ Power 5V] XXX CHECK XXX
@@ -148,17 +163,17 @@ Cellerator's spinal cord is made up of an 8-channel relay and a I2C data bus.  T
 **RJ11 jack with I2C wire diagram**
 ```
                          +----------+
-[Line 1] --Blue-Wire----[1]===      |
-[Line 2] --Green-Wire---[2]===   / --+  <- RJ11
-[Line 3] --Black-Wire---[3]===   \ --+
-[LIne 4] --Red-Wire-----[4]===      |
+[GPIO 1] --Blue-Wire----[1]===      |
+[GPIO 2] --Green-Wire---[2]===   / --+  <- RJ11
+[Ground] --Black-Wire---[3]===   \ --+
+[12VDC ] --Red-Wire-----[4]===      |
                          +----------+
 
 
-Pin 1 = SCL (Arduino Uno A5)
-Pin 2 = SDA (Arduino Uno A4)
-Pin 3 = Ground
-PIn 4 = 12V
+Pin [1] = SCL (Arduino Uno A5)
+Pin [2] = SDA (Arduino Uno A4)
+Pin [3] = Ground
+PIn [4] = 12V
 
 ```
 
@@ -179,6 +194,18 @@ PIn 4 = 12V
 
 **About:**
 
+
+
+**Wire Diagram**
+```
+5VDC -> [Raspberry Pi] <-> GPIO pins
+                      |<- CSI Camera Port
+                      |<-> Ethernet
+                      |-> HDMI
+                      |-> Audio Jack
+                      \<-> USB
+```
+
 |Code|Version  |Date |
 |--|--|--|
 | | *α*lpha |20XX|
@@ -196,6 +223,16 @@ PIn 4 = 12V
 
 **About:**
 
+**Wire Diagram**
+```
+5VDC -> [Raspberry Pi] <-> GPIO pins
+                      |<- CSI Camera Port
+                      |<-> Ethernet
+                      |-> HDMI
+                      |-> Audio Jack
+                      \<-> USB
+```
+
 |Code|Version  |Date |
 |--|--|--|
 | | *α*lpha |20XX|
@@ -211,6 +248,16 @@ PIn 4 = 12V
 
 **About:**
 
+**Wire Diagram**
+```
+5VDC -> [Raspberry Pi] <-> GPIO pins
+                      |<- CSI Camera Port
+                      |<-> Ethernet
+                      |-> HDMI
+                      |-> Audio Jack
+                      \<-> USB
+```
+
 |Code|Version  |Date |
 |--|--|--|
 | | *α*lpha |20XX|
@@ -224,6 +271,17 @@ PIn 4 = 12V
 >`"Quote"` ~ Author
 
 **About:**
+
+**Wire Diagram**
+```
+5VDC -> [Raspberry Pi] <-> GPIO pins
+                      |<- CSI Camera Port
+                      |<-> Ethernet
+                      |-> HDMI
+                      |-> Audio Jack
+                      \<-> USB
+```
+
 
 |Code|Version  |Date |
 |--|--|--|
