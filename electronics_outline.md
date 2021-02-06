@@ -47,7 +47,7 @@ Cellerator electronics uses an anatomical naming convention, see the Anatomy ref
 4. [Hand: 6 GPIO (General Purpose Input output pin)](#hand)
 5. [Heart: Power Supply (12v, 5v)](#heart)
 6. [Muscles: ](#muscle)
-7. [Lungs](#lungs)
+7. [Fluids](#fluids)
 
 
 
@@ -93,7 +93,7 @@ Raspberry Pi is a small single-board computer (SBC) developed in the United King
 
 *TL;DR*  The 8 MP camera is the eye of Cellerator and the foundation of all Cellerator preformed actions.
 
->`"Seeing is believing and believing is knowing and knowing beats unknowing and the unknown."` <br> ~ Philip Roth
+>`"Seeing is believing and believing is knowing and knowing beats unknowing and the unknown."` ~ Philip Roth
 
 **About:**
 
@@ -236,7 +236,7 @@ The 520-watt ATX computer power supply provides a 20 pin for the ATX breakout bo
 ```
 120VAC -> [Power Supply] -> [ATX Breakout] -> 3.3VDC
                                          | -> 5VDC
-                                         \-> 12VDC
+                                         \ -> 12VDC
 ```
 
 |Code|Version  |Date |
@@ -249,36 +249,47 @@ The 520-watt ATX computer power supply provides a 20 pin for the ATX breakout bo
 <img src="https://images-na.ssl-images-amazon.com/images/I/41Dm0v1foOL._AC_SX355_.jpg" >
 </p>
 
-*TL;DR*  
+*TL;DR*  Cellerator moves the hand in Cartesian space utilizing a steppers motors controlled by stepper drivers coordinated by an Arduino’s with a CNC shield.
 
->`"Quote"` ~ Author
+>`"Slow is smooth. Smooth is fast."` ~ NAVY SEAL
 
 **About:**
+The Raspberry Pi controls the hand movement in Cartesian space using X, Y, and Z stepper motors. The architecture starts with the DAVR code processed and sent by the Raspberry Pi to the Arduino.  The Raspberry Pi communicates to the Arduino using gCode through the serial bus of the USB.   The Arduino processes the serial gCode using the Marlin software. The Arduino outputs the processed gCode through the CNC shield to the stepper drivers.  The driver then controls the motion of the stepper motor.
+
+
 
 **Wire Diagram**
 ```
-5VDC -> [Raspberry Pi] <-> GPIO pins
-                      |<- CSI Camera Port
-                      |<-> Ethernet
-                      |-> HDMI
-                      |-> Audio Jack
-                      \<-> USB
+[Raspberry Pi]
+          |  <-- USB
+          V
+[Arduino Uno R3]
+          |
+          V
+[CNC Shield]
+          |
+          V
+4 x [Motor Controller]
+          |
+          V
+[Stepper Motor] = X1, X2,  Y, Z
 ```
 
 |Code|Version  |Date |
 |--|--|--|
 | | *α*lpha |20XX|
 
-## Lungs
+## Fluids
 <p align="center">
 <img src="./images/" >
 </p>
 
-*TL;DR*  
+*TL;DR*  Cellerator has three fluids, water, gas, as waste.
 
->`"Quote"` ~ Author
+>`“There is a saying in the Neverland that,every time you breathe, a grown-up dies.”` ~ J.M. Barrie, Peter Pan
 
 **About:**
+
 
 **Wire Diagram**
 ```
