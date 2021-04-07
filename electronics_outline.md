@@ -227,7 +227,7 @@ There are three parts to the hand; the data line, the waterline, and the airline
 
 *TL;DR*  The heart of Cellerator is a 520 watt ATX computer power supply attached to a breadout board.
 
->`“You must be the change you wish to see in the world.”` ~ Gandh
+>`“You must be the change you wish to see in the world.”` ~ Gandhi
 
 **About:**
 The 520-watt ATX computer power supply provides a 20 pin for the ATX breakout board.  The breakout board provides 3.3VDC, 5VDC, and 12VDC.    
