@@ -289,7 +289,9 @@ The Raspberry Pi controls the hand movement in Cartesian space using X, Y, and Z
 >`“There is a saying in the Neverland that,every time you breathe, a grown-up dies.”` ~ J.M. Barrie, Peter Pan
 
 **About:**
+Cellerator manages three fluids: water, gas, and water.  Cellerator possesses a three (3) liter water reserver attached to a float sensor, filter, and water pump.  The float sensor and water pump connect to GPIO Pin ### and Pin ### respectively.
 
+Cellerator has the ability to use normal air,  water reserver attached to a float sensor, filter, and water pump.  The float sensor and water pump connect to GPIO Pin ### and Pin ### respectively.
 
 **Wire Diagram**
 ```
